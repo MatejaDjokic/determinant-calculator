@@ -1,3 +1,10 @@
+from src.prompt import prompt
+
+
+def determinant3():
+    print(f"\nΔ: {calc3(prompt3())}\n")
+
+
 def prompt3():
     print("Example: \n")
     print("1 2 3")
@@ -5,13 +12,7 @@ def prompt3():
     print("7 8 9\n")
     print("Enter your determinant: \n")
 
-    det = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
-    for i in range(0, 3):
-        str = input()
-        row = [
-            int(number) for number in str.split()]
-        det[i] = row
-    return det
+    return prompt(3, 3)
 
 
 def calc3(det):

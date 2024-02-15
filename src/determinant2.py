@@ -1,3 +1,9 @@
+from src.prompt import prompt
+
+
+def determinant2():
+    print(f"\nΔ: {calc2(prompt2())}\n")
+
 
 def prompt2():
     print("Example: \n")
@@ -5,13 +11,7 @@ def prompt2():
     print("3 4\n")
     print("Enter your determinant: \n")
 
-    det = [[0, 0], [0, 0]]
-    for i in range(0, 2):
-        str = input()
-        row = [
-            int(number) for number in str.split()]
-        det[i] = row
-    return det
+    return prompt(2, 2)
 
 
 def calc2(det):
