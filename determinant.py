@@ -1,7 +1,7 @@
-import os
 from src.order2 import prompt2, calc2
 from src.order3 import prompt3, calc3
 import argparse
+import os
 
 
 def main():
@@ -19,14 +19,17 @@ def main():
 
     args = parser.parse_args()
 
-    if args.order2:
-        print(f"\nEquals: {calc2(prompt2())}")
-    elif args.order3:
-        print(f"\nEquals: {calc3(prompt3())}")
-    elif args.install:
-        install()
-    else:
-        print("Use -h or --help for usage information.")
+    try:
+        if args.order2:
+            print(f"\nEquals: {calc2(prompt2())}")
+        elif args.order3:
+            print(f"\nEquals: {calc3(prompt3())}")
+        elif args.install:
+            install()
+        else:
+            print("Use -h or --help for usage information.")
+    except KeyboardInterrupt:
+        print("Exiting...")
 
 
 def install():
