@@ -1,5 +1,5 @@
-from src.fraction import to_fraction
 from src.determinant2 import calc2
+from fractions import Fraction
 from src.prompt import prompt
 
 
@@ -28,7 +28,7 @@ def xy_calc(system):
     dx = calc2([system[2], system[1]])
     dy = calc2([system[0], system[2]])
 
-    x = to_fraction(dx, d)
-    y = to_fraction(dy, d)
+    x = Fraction(dx, d)
+    y = Fraction(dy, d)
 
     return d, dx, dy, x, y

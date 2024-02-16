@@ -1,5 +1,5 @@
-from src.fraction import to_fraction
 from src.determinant3 import calc3
+from fractions import Fraction
 from src.prompt import prompt
 
 
@@ -30,8 +30,8 @@ def xyz_calc(system):
     dy = calc3([system[0], system[3], system[2]])
     dz = calc3([system[0], system[1], system[3]])
 
-    x = to_fraction(dx, d)
-    y = to_fraction(dy, d)
-    z = to_fraction(dz, d)
+    x = Fraction(dx, d)
+    y = Fraction(dy, d)
+    z = Fraction(dz, d)
 
     return d, dx, dy, dz, x, y, z
