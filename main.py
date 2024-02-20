@@ -2,8 +2,8 @@ from src.determinant2 import determinant2
 from src.determinant3 import determinant3
 from src.system2 import system2
 from src.system3 import system3
+from src.install import install
 import argparse
-import os
 
 
 def main():
@@ -42,10 +42,6 @@ def main():
             print("Use -h or --help for usage information.")
     except KeyboardInterrupt:
         print("\nExiting...")
-
-
-def install():
-    os.system(r"pip install -r requirements.txt")
 
 
 if __name__ == "__main__":
