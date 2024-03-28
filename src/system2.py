@@ -1,6 +1,6 @@
 from src.determinant2 import calc2
 from fractions import Fraction
-from src.prompt import prompt
+from src.prompt import default_prompt
 
 
 def system2():
@@ -20,7 +20,7 @@ def xy_prompt():
     print("4 5 6\n")
     print("Enter your system: \n")
 
-    return prompt(3, 2)
+    return default_prompt(3, 2)
 
 
 def xy_calc(system):

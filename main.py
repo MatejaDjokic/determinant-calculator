@@ -3,6 +3,7 @@ from src.determinant3 import determinant3
 from src.system2 import system2
 from src.system3 import system3
 from src.install import install
+from src.test import test
 import argparse
 
 
@@ -25,6 +26,9 @@ def main():
     parser.add_argument('-i', '--install', action='store_true',
                         help='installs the dependencies')
 
+    parser.add_argument('-t', '--test', action='store_true',
+                        help='for testing purposes')
+
     args = parser.parse_args()
 
     try:
@@ -38,6 +42,8 @@ def main():
             system3()
         elif args.install:
             install()
+        elif args.test:
+            test()
         else:
             print("Use -h or --help for usage information.")
     except KeyboardInterrupt:

@@ -1,4 +1,4 @@
-from src.prompt import prompt
+from src.prompt import default_prompt
 
 
 def determinant2():
@@ -11,7 +11,7 @@ def prompt2():
     print("3 4\n")
     print("Enter your determinant: \n")
 
-    return prompt(2, 2)
+    return default_prompt(2, 2)
 
 
 def calc2(det):
