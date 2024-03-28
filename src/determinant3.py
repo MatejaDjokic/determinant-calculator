@@ -3,6 +3,7 @@ from src.prompt import default_prompt
 
 def determinant3():
     print(f"\nΔ: {calc3(prompt3())}\n")
+    print("Bravo resio si prvu determinantu 3. reda!")
 
 
 def prompt3():
